@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skyline Apartments | CrowdBuild</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">CrowdBuild</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="details-container">
+        <section class="project-info">
+            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=600&q=80" alt="Skyline Apartments" class="details-img">
+            <h1>Skyline Apartments</h1>
+            <p class="location">📍 Mumbai, Maharashtra</p>
+            <p class="description">
+                Skyline Apartments is a premium residential high-rise located in the heart of Mumbai. 
+                Featuring state-of-the-art amenities, a rooftop infinity pool, and smart-home integration, 
+                this project is projected to yield high rental demand.
+            </p>
+            
+            <div class="funding-status">
+                <h3>Funding Progress</h3>
+                <p>Target: ₹5,00,00,000</p>
+                <div class="progress-container">
+                    <div class="progress-bar" id="detailProgress" style="width: 65%;">65%</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="investment-form-section">
+            <div class="form-card">
+                <h2>Invest in this Project</h2>
+                <p class="min-invest">Minimum Investment: <strong>₹50,000</strong></p>
+                <p class="projected-roi">Projected ROI: <strong>10% Annually</strong></p>
+                
+                <div class="form-group">
+                    <label for="actualInvestAmount">Investment Amount (₹):</label>
+                    <input type="number" id="actualInvestAmount" placeholder="Enter amount...">
+                    <small id="errorMsg" style="color: red; display: none;">Amount must be at least ₹50,000.</small>
+                </div>
+
+                <div class="profit-preview">
+                    <p>Estimated Yearly Return: <strong id="dynamicReturn">₹0</strong></p>
+                </div>
+
+                <button id="confirmInvestBtn" class="invest-trigger">Confirm Investment</button>
+                <p id="successMsg" style="color: green; margin-top: 10px; display: none; font-weight: bold;">
+                    🎉 Investment Successful!
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 CrowdBuild FinTech Solutions</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

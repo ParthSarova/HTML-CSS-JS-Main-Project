@@ -1,0 +1,351 @@
+/* ==========================================================================
+   CrowdBuild - Modern FinTech Stylesheet (All 5 Pages)
+   ========================================================================== */
+
+/* --- 1. Variables & Reset --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary-dark: #0f172a;    /* Deep Slate */
+    --primary-blue: #0284c7;    /* Trust Blue */
+    --accent-green: #10b981;    /* Money/Success Green */
+    --bg-light: #f8fafc;        /* Off-white background */
+    --text-main: #334155;       /* Soft dark text */
+    --text-muted: #64748b;
+    --card-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+    --hover-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* --- 2. Keyframe Animations (Assignment Requirement) --- */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeInDown 0.8s ease-out forwards;
+}
+
+/* --- 3. Navigation (Flexbox) --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 5%;
+    background: var(--primary-dark);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    background: linear-gradient(to right, #fff, var(--primary-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover, .active-link {
+    color: var(--accent-green);
+}
+
+/* --- 4. Global Components (Buttons & Progress Bars) --- */
+button {
+    font-family: 'Inter', sans-serif;
+}
+
+.invest-trigger {
+    background: var(--primary-blue);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(2, 132, 199, 0.4);
+}
+
+.invest-trigger:hover {
+    background: #0369a1;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px -1px rgba(2, 132, 199, 0.6);
+}
+
+.progress-container {
+    background: #e2e8f0;
+    border-radius: 20px;
+    height: 10px; /* Slimmer, more modern look */
+    margin: 15px 0;
+    overflow: hidden;
+}
+
+.progress-bar {
+    background: linear-gradient(90deg, var(--accent-green), #34d399);
+    height: 100%;
+    border-radius: 20px;
+    transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Hidden text for a cleaner bar, we will just rely on width */
+    color: transparent; 
+}
+
+/* --- 5. Projects Gallery (CSS Grid) --- */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    padding: 3rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: var(--card-shadow);
+    overflow: hidden;
+    transition: all 0.4s ease;
+    border: 1px solid #f1f5f9;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--hover-shadow);
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-content h3 {
+    color: var(--primary-dark);
+    margin-bottom: 5px;
+}
+
+/* --- 6. ROI Calculator (index.html) --- */
+.calculator {
+    background: white;
+    max-width: 600px;
+    margin: 3rem auto;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: var(--card-shadow);
+    text-align: center;
+}
+
+.calc-box input, .calc-box select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.calc-box input:focus, .calc-box select:focus {
+    border-color: var(--primary-blue);
+}
+
+#resultDisplay {
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    color: var(--primary-dark);
+    background: #f1f5f9;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+/* --- 7. Project Details Page --- */
+.details-container {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 3rem;
+    padding: 3rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.details-img {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: var(--card-shadow);
+}
+
+.form-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: var(--card-shadow);
+    position: sticky;
+    top: 100px;
+    border-top: 5px solid var(--primary-blue);
+}
+
+/* --- 8. Dashboard Layout --- */
+.dashboard-container {
+    max-width: 1100px;
+    margin: 3rem auto;
+    padding: 0 5%;
+}
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.summary-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: var(--card-shadow);
+    border-left: 5px solid var(--primary-dark);
+    transition: transform 0.3s;
+}
+
+.summary-card:hover {
+    transform: scale(1.02);
+}
+
+.stat-amount {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+}
+
+.text-success {
+    color: var(--accent-green);
+}
+
+.portfolio-section {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: var(--card-shadow);
+}
+
+/* --- 9. Pricing Grid Layout --- */
+.pricing-header {
+    text-align: center;
+    padding: 4rem 2rem 2rem;
+}
+
+.fee-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto 4rem auto;
+    padding: 0 5%;
+}
+
+.fee-card {
+    background: white;
+    padding: 3rem 2rem;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s ease;
+}
+
+.fee-card:hover {
+    box-shadow: var(--hover-shadow);
+    transform: translateY(-5px);
+}
+
+.featured-fee {
+    border: 2px solid var(--primary-blue);
+    transform: scale(1.05);
+}
+
+.featured-fee:hover {
+    transform: scale(1.05) translateY(-5px);
+}
+
+.fee-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.fee-rate {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin: 1rem 0;
+}
+
+.fee-rate span {
+    font-size: 1rem;
+    color: var(--text-muted);
+}
+
+/* --- 10. Footer --- */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: var(--primary-dark);
+    color: #94a3b8;
+    margin-top: 4rem;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .details-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .nav-links {
+        display: none; /* In a real app, you'd add a hamburger menu here */
+    }
+    
+    .featured-fee {
+        transform: none;
+    }
+}

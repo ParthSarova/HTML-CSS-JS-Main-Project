@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investor Dashboard | CrowdBuild</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">CrowdBuild</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="dashboard.html" style="font-weight: bold; text-decoration: underline;">Dashboard</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="dashboard-container">
+        <div class="dashboard-header">
+            <h2>Welcome back, Investor</h2>
+            <p>Here is the overview of your real estate portfolio.</p>
+        </div>
+
+        <section class="summary-grid">
+            <div class="summary-card">
+                <h3>Total Invested</h3>
+                <p class="stat-amount">₹2,50,000</p>
+            </div>
+            <div class="summary-card">
+                <h3>Expected Annual Return</h3>
+                <p class="stat-amount text-success">₹27,500</p>
+            </div>
+            <div class="summary-card">
+                <h3>Active Projects</h3>
+                <p class="stat-amount">2</p>
+            </div>
+        </section>
+
+        <section class="portfolio-section">
+            <h2>My Investments</h2>
+            
+            <div class="portfolio-item">
+                <div class="portfolio-info">
+                    <h4>Skyline Apartments</h4>
+                    <p>Invested: ₹1,50,000 | ROI: 10%</p>
+                </div>
+                <div class="portfolio-status">
+                    <p>Project Funding Status: <strong>In Progress</strong></p>
+                    <div class="progress-container" style="margin: 5px 0;">
+                        <div class="progress-bar" style="width: 67%;">67%</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-item">
+                <div class="portfolio-info">
+                    <h4>Tech Park Alpha</h4>
+                    <p>Invested: ₹1,00,000 | ROI: 12.5%</p>
+                </div>
+                <div class="portfolio-status">
+                    <p>Project Funding Status: <strong>Fully Funded</strong></p>
+                    <div class="progress-container" style="margin: 5px 0;">
+                        <div class="progress-bar" style="width: 100%; background: #27ae60;">100%</div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 CrowdBuild FinTech Solutions</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrowdBuild | Real Estate Crowdfunding</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+        <nav class="navbar">
+            <div class="logo">CrowdBuild</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="calculator">
+            <h2>ROI Estimator</h2>
+            <div class="calc-box">
+                <input type="number" id="investAmount" placeholder="Amount to Invest (₹)">
+                <select id="propertyType">
+                    <option value="0.08">Luxury Villa (8% ROI)</option>
+                    <option value="0.12">Urban Office (12% ROI)</option>
+                </select>
+                <button id="calcBtn">Calculate Return</button>
+                <p id="resultDisplay">Estimated Profit: ₹0</p>
+            </div>
+        </section>
+
+        <section id="projects" class="project-grid">
+            <article class="card">
+                <img src="https://via.placeholder.com/300x200" alt="Property">
+                <div class="card-content">
+                    <h3>Skyline Apartments</h3>
+                    <p>Target: ₹5,00,00,000</p>
+                    <div class="progress-container">
+                        <div class="progress-bar" id="p1" style="width: 65%;">65%</div>
+                    </div>
+                    <button class="invest-trigger" onclick="simulateInvest('p1')">Invest Now</button>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 CrowdBuild FinTech Solutions</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
